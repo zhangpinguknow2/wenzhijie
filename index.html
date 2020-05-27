@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title></title>
+	</head>
+	<body>
+		<div class="video-wrapper">
+			<a target="_blank" onclick="openVideo('./video/5.mp4')">
+				<div>跳转新页面播放</div>
+			</a>
+		</div>
+	</body>
+</html>
+<script>
+function openVideo(src) {
+	var page = window.open();
+	var html="<body style='background:black'><div style='width:80%;margin:auto;'><video controls width='100%' autoplay src='"+src+ "'></video> </div></body>"
+    page.document.write(html);
+}
+</script>
